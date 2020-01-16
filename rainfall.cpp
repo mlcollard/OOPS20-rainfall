@@ -8,19 +8,17 @@
 #include <vector>
 
 int main() {
-    std::vector<double> rainfall;
-    double t;
-    double m;
-    double n;
 
     // Get rainfall data from stdin
+    std::vector<double> rainfall;
+    double n;
     while (std::cin >> n) {
         rainfall.push_back(n);
     }
 
     // Calculate average and heaviest rainfall
-    t = rainfall[0];
-    m = rainfall[0];
+    double t = rainfall[0];
+    double m = rainfall[0];
     for (int i = 1; i < rainfall.size(); ++i) {
         t += rainfall[i];
         if (rainfall[i] > m)
