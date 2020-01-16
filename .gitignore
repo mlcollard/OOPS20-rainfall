@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+# Specific build products
+testrun.txt
+rainfall
