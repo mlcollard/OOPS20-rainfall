@@ -16,15 +16,19 @@ int main() {
         rainfall.push_back(n);
     }
 
-    // Calculate average and heaviest rainfall
+    // Calculate average rainfall
     double sum = rainfall[0];
-    double max = rainfall[0];
     for (int i = 1; i < rainfall.size(); ++i) {
         sum += rainfall[i];
+    }
+    double average = sum / rainfall.size();
+
+    // Calculate max rainfall
+    double max = rainfall[0];
+    for (int i = 1; i < rainfall.size(); ++i) {
         if (rainfall[i] > max)
             max = rainfall[i];
     }
-    double average = sum / rainfall.size();
 
     // Generate the report and send to stdout
     std::cout << "Average Hourly Rainfall: " << average << " hundreds of inches" << '\n';
