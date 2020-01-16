@@ -1,2 +1,2 @@
-Average Hourly Rainfall: 0.0441192 hundreds of inches
+Average Hourly Rainfall: 0.0441195 hundreds of inches
 Heaviest Hourly Rainfall: 1.04 hundreds of inches

@@ -8,10 +8,10 @@
 #include <vector>
 
 int main() {
-    std::vector<float> rainfall;
-    float t;
-    float m;
-    float n;
+    std::vector<double> rainfall;
+    double t;
+    double m;
+    double n;
 
     // Get rainfall data from stdin
     while (std::cin >> n) {
