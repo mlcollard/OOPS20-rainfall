@@ -1,3 +1,9 @@
+/*
+    rainfall.cpp
+
+    Rainfall report
+*/
+
 #include <iostream>
 #include <vector>
 
