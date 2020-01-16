@@ -24,9 +24,10 @@ int main() {
         if (rainfall[i] > max)
             max = rainfall[i];
     }
+    double average = total / rainfall.size();
 
     // output rainfall report
-    std::cout << "Average Hourly Rainfall: " << (total / rainfall.size()) << " hundreds of inches" << '\n';
+    std::cout << "Average Hourly Rainfall: " << average << " hundreds of inches" << '\n';
     std::cout << "Heaviest Hourly Rainfall: " << max << " hundreds of inches" << '\n';
 
     return 0;
