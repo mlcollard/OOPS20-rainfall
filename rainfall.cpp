@@ -1,3 +1,9 @@
+/*
+ * rainfall.cpp
+ *
+ * Generates a report from rainfall data in ./rainfall.csv
+ */
+
 #include <iostream>
 #include <vector>
 
