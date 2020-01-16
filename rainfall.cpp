@@ -26,4 +26,6 @@ int main() {
     }
     cout << "Average Hourly Rainfall: " << (t / rainfall.size()) << " hundreds of inches" << '\n';
     cout << "Heaviest Hourly Rainfall: " << m << " hundreds of inches" << '\n';
+
+    return 0;
 }
