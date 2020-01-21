@@ -14,12 +14,7 @@
  * @param data Container of data to find the maximum of
  */
 double maximum(const std::vector<double>& data) {
-    double max = 0;
-    for (const auto item : data) {
-        if (item > max)
-            max = item;
-    }
-    return max;
+    return *std::max_element(data.begin(), data.end());
 }
 
 /**
