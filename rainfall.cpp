@@ -19,6 +19,17 @@ double heaviest(const std::vector<double>& data) {
     return max;
 }
 
+// average of the vector
+double avg(const std::vector<double>& data) {
+
+    auto total = data[0];
+    for (int i = 1; i < data.size(); ++i) {
+        total += data[i];
+    }
+    
+    return total / data.size();
+}
+
 int main() {
 
     // input hourly rainfall data
@@ -32,11 +43,7 @@ int main() {
     auto max = heaviest(rainfall);
 
     // calculate average rainfall
-    auto total = rainfall[0];
-    for (int i = 1; i < rainfall.size(); ++i) {
-        total += rainfall[i];
-    }
-    auto average = total / rainfall.size();
+    auto average = avg(rainfall);
 
     // output rainfall report
     std::cout << "Average Hourly Rainfall: " << average << " hundreds of inches" << '\n';
