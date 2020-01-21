@@ -11,9 +11,9 @@
 double heaviest(const std::vector<double>& data) {
 
     auto max = data[0];
-    for (int i = 1; i < data.size(); ++i) {
-        if (data[i] > max)
-            max = data[i];
+    for(const auto item : data) {
+        if (item > max)
+            max = item;
     }
     return max;
 }
@@ -21,9 +21,9 @@ double heaviest(const std::vector<double>& data) {
 // average of the vector
 double avg(const std::vector<double>& data) {
 
-    auto total = data[0];
-    for (int i = 1; i < data.size(); ++i) {
-        total += data[i];
+    auto total = 0;
+    for (const auto item : data) {
+        total += item;
     }
 
     return total / data.size();
