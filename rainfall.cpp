@@ -16,13 +16,17 @@ int main() {
         rainfall.push_back(n);
     }
 
-    // calculate average and heaviest rainfall
-    double total = rainfall[0];
+    // calculate heaviest rainfall
     double max = rainfall[0];
     for (int i = 1; i < rainfall.size(); ++i) {
-        total += rainfall[i];
         if (rainfall[i] > max)
             max = rainfall[i];
+    }
+
+    // calculate average rainfall
+    double total = rainfall[0];
+    for (int i = 1; i < rainfall.size(); ++i) {
+        total += rainfall[i];
     }
     double average = total / rainfall.size();
 
