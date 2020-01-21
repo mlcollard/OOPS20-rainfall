@@ -6,6 +6,7 @@
 
 #include <iostream>
 #include <vector>
+#include <iterator>
 
 /**
  * Finds the maximum value from a list of numbers.
@@ -35,11 +36,7 @@ double mean(const std::vector<double>& data) {
 int main() {
 
     // Get rainfall data from stdin
-    std::vector<double> rainfall;
-    double n;
-    while (std::cin >> n) {
-        rainfall.push_back(n);
-    }
+    std::vector<double> rainfall {std::istream_iterator<double>(std::cin), std::istream_iterator<double>()};
 
     // Generate the report and send to stdout
     std::cout << "Average Hourly Rainfall: " << mean(rainfall) << " hundreds of inches" << '\n';
