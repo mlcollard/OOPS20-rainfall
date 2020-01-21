@@ -41,13 +41,7 @@ int main() {
         rainfall.push_back(n);
     }
 
-    // Calculate average rainfall
-    auto average = mean(rainfall);
-
-    // Calculate max rainfall
-    auto max = maximum(rainfall);
-
     // Generate the report and send to stdout
-    std::cout << "Average Hourly Rainfall: " << average << " hundreds of inches" << '\n';
-    std::cout << "Heaviest Hourly Rainfall: " << max << " hundreds of inches" << '\n';
+    std::cout << "Average Hourly Rainfall: " << mean(rainfall) << " hundreds of inches" << '\n';
+    std::cout << "Heaviest Hourly Rainfall: " << maximum(rainfall) << " hundreds of inches" << '\n';
 }
