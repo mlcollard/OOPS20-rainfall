@@ -7,6 +7,7 @@
 #include <iostream>
 #include <vector>
 #include <iterator>
+#include <numeric>
 
 /**
  * Finds the maximum value from a list of numbers.
@@ -26,11 +27,7 @@ double maximum(const std::vector<double>& data) {
  * @param data Container of data to calculate the mean of
  */
 double mean(const std::vector<double>& data) {
-    double sum = 0;
-    for (const auto item : data) {
-        sum += item;
-    }
-    return sum / data.size();
+    return std::accumulate(data.begin(), data.end(), 0.0) / data.size();
 }
 
 int main() {
