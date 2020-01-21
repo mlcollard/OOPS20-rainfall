@@ -6,6 +6,7 @@
 
 #include <iostream>
 #include <vector>
+#include <iterator>
 
 // maximum data in the vector
 double heaviest(const std::vector<double>& data) {
@@ -33,11 +34,7 @@ double avg(const std::vector<double>& data) {
 int main() {
 
     // input hourly rainfall data
-    std::vector<double> rainfall;
-    double n;
-    while (std::cin >> n) {
-        rainfall.push_back(n);
-    }
+    std::vector<double> rainfall{std::istream_iterator<double>(std::cin), std::istream_iterator<double>()};
 
     // calculate heaviest rainfall
     auto max = heaviest(rainfall);
