@@ -9,18 +9,6 @@
 #include <numeric>
 #include <algorithm>
 
-// maximum data in the vector
-double heaviest(const std::vector<double>& data) {
-
-    return *std::max_element(data.begin(), data.end());
-}
-
-// average of the vector
-double avg(const std::vector<double>& data) {
-
-    return std::accumulate(data.begin(), data.end(), 0.0) / data.size();
-} 
-
 int main() {
     // input hourly rainfall data
     std::vector<double> rainfall{std::istream_iterator<double>(std::cin), std::istream_iterator<double>()};
