@@ -20,6 +20,18 @@ double maximum(const std::vector<double>& data) {
     return max;
 }
 
+/**
+ * Calcuates the arithmetic mean of some data.
+ * @param data Container of data to calculate the mean of
+ */
+double mean(const std::vector<double>& data) {
+    auto sum = data[0];
+    for (int i = 1; i < data.size(); ++i) {
+        sum += data[i];
+    }
+    return sum / data.size();
+}
+
 int main() {
 
     // Get rainfall data from stdin
@@ -30,11 +42,7 @@ int main() {
     }
 
     // Calculate average rainfall
-    auto sum = rainfall[0];
-    for (int i = 1; i < rainfall.size(); ++i) {
-        sum += rainfall[i];
-    }
-    auto average = sum / rainfall.size();
+    auto average = mean(rainfall);
 
     // Calculate max rainfall
     auto max = maximum(rainfall);
