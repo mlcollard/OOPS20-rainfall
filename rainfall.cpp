@@ -17,14 +17,14 @@ int main() {
     }
 
     // Calculate average rainfall
-    double sum = rainfall[0];
+    auto sum = rainfall[0];
     for (int i = 1; i < rainfall.size(); ++i) {
         sum += rainfall[i];
     }
-    double average = sum / rainfall.size();
+    auto average = sum / rainfall.size();
 
     // Calculate max rainfall
-    double max = rainfall[0];
+    auto max = rainfall[0];
     for (int i = 1; i < rainfall.size(); ++i) {
         if (rainfall[i] > max)
             max = rainfall[i];
