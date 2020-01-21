@@ -8,18 +8,7 @@
 #include <vector>
 #include <iterator>
 #include <numeric>
-
-// maximum data in the vector
-double heaviest(const std::vector<double>& data) {
-
-    return *std::max_element(data.begin(), data.end());
-}
-
-// average of the vector
-double avg(const std::vector<double>& data) {
-    
-    return std::accumulate(data.begin(), data.end(), 0.0) / data.size();
-}
+#include <algorithm>
 
 int main() {
 
@@ -27,10 +16,10 @@ int main() {
     std::vector<double> rainfall{std::istream_iterator<double>(std::cin), std::istream_iterator<double>()};
 
     // calculate heaviest rainfall
-    auto max = heaviest(rainfall);
+    auto max = *std::max_element(rainfall.begin(), rainfall.end());
 
     // calculate average rainfall
-    auto average = avg(rainfall);
+    auto average = std::accumulate(rainfall.begin(), rainfall.end(), 0.0) / rainfall.size();
 
     // output rainfall report
     std::cout << "Average Hourly Rainfall: " << average << " hundreds of inches" << '\n';
