@@ -13,10 +13,10 @@
  * @param data Container of data to find the maximum of
  */
 double maximum(const std::vector<double>& data) {
-    auto max = data[0];
-    for (int i = 1; i < data.size(); ++i) {
-        if (data[i] > max)
-            max = data[i];
+    auto max = 0;
+    for (const auto item : data) {
+        if (item > max)
+            max = item;
     }
     return max;
 }
@@ -26,9 +26,9 @@ double maximum(const std::vector<double>& data) {
  * @param data Container of data to calculate the mean of
  */
 double mean(const std::vector<double>& data) {
-    auto sum = data[0];
-    for (int i = 1; i < data.size(); ++i) {
-        sum += data[i];
+    auto sum = 0;
+    for (const auto item : data) {
+        sum += item;
     }
     return sum / data.size();
 }
