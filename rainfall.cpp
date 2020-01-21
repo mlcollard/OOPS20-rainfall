@@ -14,7 +14,7 @@ double heaviest(const std::vector<double>& data) {
         if (data[i] > max)
             max = data[i];
     }
-    return 0;
+    return max;
 }
 
 int main() {
