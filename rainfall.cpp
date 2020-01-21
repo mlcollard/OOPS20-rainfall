@@ -1,23 +1,33 @@
+/*
+    rainfall.cpp
+
+    Rainfall report
+*/
 #include <iostream>
 #include <vector>
 
-using namespace std;
-
 int main() {
-    vector<float> rainfall;
-    float t;
-    float m;
-    float n;
-    while (cin >> n) {
+    // input hourly rainfall data
+    vector<double> rainfall;
+    double n;
+    while (std::cin >> n) {
         rainfall.push_back(n);
     }
-    t = rainfall[0];
-    m = rainfall[0];
+
+    //calculate average and heaviest rainfall
+    double max = rainfall[0];
     for (int i = 1; i < rainfall.size(); ++i) {
-        t += rainfall[i];
-        if (rainfall[i] > m)
-            m = rainfall[i];
+        if (rainfall[i] > max)
+            max = rainfall[i];
     }
-    cout << "Average Hourly Rainfall: " << (t / rainfall.size()) << " hundreds of inches" << '\n';
-    cout << "Heaviest Hourly Rainfall: " << m << " hundreds of inches" << '\n';
+    
+    double total = rainfall[0];
+    for (int i = 1; i < rainfall.size(); ++i) {
+        total += rainfall[i];
+    }
+    double average = total / rainfall.size();
+
+    // output rainfall report
+    cout << "Average Hourly Rainfall: " << average << " hundreds of inches" << '\n';
+    cout << "Heaviest Hourly Rainfall: " << max << " hundreds of inches" << '\n';
 }
