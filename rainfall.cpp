@@ -7,6 +7,19 @@
 #include <iostream>
 #include <vector>
 
+/**
+ * Finds the maximum value from a list of numbers.
+ * @param data Container of data to find the maximum of
+ */
+double maximum(const std::vector<double>& data) {
+    auto max = data[0];
+    for (int i = 1; i < data.size(); ++i) {
+        if (data[i] > max)
+            max = data[i];
+    }
+    return max;
+}
+
 int main() {
 
     // Get rainfall data from stdin
@@ -24,11 +37,7 @@ int main() {
     auto average = sum / rainfall.size();
 
     // Calculate max rainfall
-    auto max = rainfall[0];
-    for (int i = 1; i < rainfall.size(); ++i) {
-        if (rainfall[i] > max)
-            max = rainfall[i];
-    }
+    auto max = maximum(rainfall);
 
     // Generate the report and send to stdout
     std::cout << "Average Hourly Rainfall: " << average << " hundreds of inches" << '\n';
