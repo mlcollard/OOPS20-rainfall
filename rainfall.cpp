@@ -26,10 +26,10 @@ int main() {
     std::vector<double> rainfall{std::istream_iterator<double>(std::cin), std::istream_iterator<double>()};
 
     //calculate heaviest rainfall
-    auto max = heaviest(rainfall);
+    auto max = *std::max_element(rainfall.begin(), rainfall.end());
 
     // calculate average rainfall
-    auto average = avg(rainfall);
+    auto average = std::accumulate(rainfall.begin(), rainfall.end(), 0.0) / rainfall.size();
 
     // output rainfall report
     std::cout << "Average Hourly Rainfall: " << average << " hundreds of inches" << '\n';
