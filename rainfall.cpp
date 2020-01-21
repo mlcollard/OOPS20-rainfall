@@ -7,16 +7,12 @@
 #include <vector>
 #include <iterator>
 #include <numeric>
+#include <algorithm>
 
 // maximum data in the vector
 double heaviest(const std::vector<double>& data) {
 
-    auto max = data[0];
-    for(const auto item : data) {
-        if (item > max)
-            max = item;
-    }
-    return max;
+    return *std::max_element(data.begin(), data.end());
 }
 
 // average of the vector
