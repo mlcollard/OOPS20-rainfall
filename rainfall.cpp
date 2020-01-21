@@ -36,7 +36,7 @@ int main() {
         rainfall.push_back(n);
     }
 
-    //calculate average and heaviest rainfall
+    //calculate heaviest rainfall
     auto max = heaviest(rainfall);
 
     // calculate average rainfall
